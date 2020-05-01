@@ -1,0 +1,54 @@
+<span>
+<h3>Div Size change animation</h3>
+
+<button (click) = "changeState()">Change Size</button>
+<br>
+<br>
+<div [@changeDivSize] = currentState></div>
+
+<br>
+<span>
+<h3>Ballon Effect</h3>
+</span>
+<br>
+
+<div (click) = "changeState()"
+style="width:100px;height:100px;border-radius:100%;margin: 3rem; background-color:#333"
+[@balloonEffect]=currentState></div>
+
+
+</span>
+
+<span>
+<h3>Fade-In and Fade-Out animation</h3>
+
+<button (click)="addItem()">Add to List</button>
+<button (click)="removeItem()">Remove from List</button>
+
+<div style="widows: 200px;margin-bottom: 50px;">
+
+<ul>
+    <li *ngFor="let list of listItems" [@fadeInOut]>
+        {{list}}
+    </li>
+</ul>
+
+</div>
+</span>
+<br>
+
+<span>
+<h3>Enter and Leave animation</h3>
+
+<button (click)="addItem()">Add List</button>
+<button (click)="removeItem()">Remove List</button>
+
+<div style="width:200px; margin-left: 20px">
+  <ul>
+    <li *ngFor="let list of listItems" [@EnterLeave]="'flyIn'">
+      {{list}}
+    </li>
+  </ul>
+</div>
+
+</span>
